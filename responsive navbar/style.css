@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'DM Mono', monospace;
+}
+body{
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+.navbar{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 1.6rem;
+     padding: 0 2rem;
+     background: #fff;
+     width: 100%;
+     height: 5rem;
+     position: relative;
+}
+.logo{
+     font-size: 1rem;
+     font-weight: 500;
+     color: #333;
+     text-transform: capitalize;
+}
+.searchbar {
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     width: 25rem;
+     height:4rem ;
+     background: #f0f0f0;
+     border-radius: 0.5rem;
+     padding: 0 1rem;
+}
+.searchbar .input_side{
+     display: flex;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+     gap: 1rem;
+}
+.searchbar .input_side input {
+     width: 100%;
+     height: 100%;
+     border: none;
+     background: transparent;
+     outline: none;
+     font-size: 1.2rem;
+     color: #333;
+}
+.navbar .res_icon ion-icon,
+.searchbar  ion-icon{
+     font-size: 1.5rem;
+     color: #333;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.searchbar .search_close{
+     display: none;
+}
+.nav_Links{
+     display:flex;
+     align-items:center;
+     gap:1.5rem;
+     list-style: none;
+     font-size: 1.1rem;
+}
+.nav_Links li a{
+     text-decoration: none;
+     color: #333;
+     font-weight: 500;
+     transition: color 0.3s ease;
+}
+.navbar .res_icon{
+     display:none;
+     align-items: center;
+     gap:1.3rem;
+}
+@media screen and (max-width:1250px) {
+     .searchbar{
+          display: none;
+     }
+     .nav_Links{
+          position: absolute;
+          top: 5rem;
+          right:0;
+          flex-direction: column;
+          background: #fff;
+          height:calc(100vh - 5rem);
+          width: 50%;
+          padding:1rem 0.6rem;
+          gap:0.3rem;
+          transform:translateX(100%);
+          transition: all 0.3s ease;
+     }
+     .nav_Links li  {
+          padding: 1rem 1rem;
+          width:100%;
+          transition: all 0.3s ease;
+     }
+     .nav_Links li:hover{
+          background:#f0f0f0;
+     }
+
+     .searchbar{
+          position: absolute;
+          top: 0;
+          left:0;
+          width: 100%;
+          height: 5rem;
+          background: #fff;
+          z-index: 1000;
+          display: none;
+     }
+     .searchbar .search_close{
+          display: flex;
+     }
+     .navbar .res_icon{
+          display: flex;
+     }
+     .searchbar.active{
+          display: flex;
+     }
+     .nav_Links.active{
+          transform: translateX(0);
+     }
+}
