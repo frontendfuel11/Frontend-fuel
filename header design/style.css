@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+     --font-DmMono: "DM Mono", monospace;
+     --font-Playfair: "Playfair Display", serif;
+}
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family:var(--font-DmMono);
+}
+body{
+     background: url(1.jpg) no-repeat center center fixed;
+     height: 100vh;
+     background-size: cover;
+}
+.navbar{
+     height: 100px;
+     width: 100%;
+     position: sticky;
+     top: 0;
+     left: 0;
+     background: rgba(0 , 0  , 0 , 0.15);
+     backdrop-filter: blur(10px);
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 40px;
+}
+.navbar .logo img {
+     height: 90px;
+     width: auto;
+}
+.navbar .links{
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     list-style: none;
+}
+.navbar .links li a{
+     text-decoration: none;
+     color: #fff;
+     font-size: 20px;
+     text-transform: capitalize;
+     position: relative;
+}
+.navbar .links li a::after{
+     content: "";
+     position: absolute;
+     width: 0%;
+     height: 2px;
+     background: #fff;
+     bottom: -5px;
+     left: 0;
+     transition: width 0.3s ease-in-out;
+}
+.navbar .links li a:hover::after{
+     width: 100%;
+}
+.data{
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+     align-items: center;
+     margin-top: 200px;
+}
+.data h3 {
+     font-size: 30px;
+     color: #fff;
+     text-decoration: underline;
+     text-decoration-thickness: 2px;
+     text-underline-offset: 3px;
+     text-transform: capitalize;
+     font-weight: 400;
+}
+.data h1{
+     color: #fff;
+     font-family: var(--font-Playfair);
+     font-size: 80px;
+     text-transform: capitalize;
+     text-align: center;
+}
+.data button {
+     padding: 10px 30px ;
+     border: none;
+     outline: none;
+     background: rgba(0 , 0  , 0 , 0.15);
+     backdrop-filter: blur(10px);
+     color: #fff;
+     font-size: 20px;
+     letter-spacing: 2px;
+     border-radius: 6px;
+     cursor: pointer;
+}
